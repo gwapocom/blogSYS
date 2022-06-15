@@ -124,6 +124,11 @@ $DateTime=strftime("%B-%d-%Y %H:%M:%S", $CurrentTime);
                       }
                       $sql = "SELECT * FROM posts WHERE id='$PostIdFromURL'";
                       $stmt = $ConnectingDB->query($sql);
+                      $Result=$stmt->rowCount();
+                      if ($Result!=1) {
+                         $_SESSION['ErrorMessage']="Bad Request !";
+                         Redirect_to("Blog.php?page=1");
+                      }
                    }
                while ($DataRows = $stmt->fetch()) {
                   $PostId = $DataRows["id"];
@@ -140,12 +145,11 @@ $DateTime=strftime("%B-%d-%Y %H:%M:%S", $CurrentTime);
                    <h4 class="card-title">
                       <?php echo $PostTitle; ?>
                    </h4>
-                   <small class="text-muted">Written by <?php echo htmlentities($Admin); ?> On <?php echo htmlentities($DateTime); ?></small>
-                   <span style="float: right;" class="badge badge-dark text-light">Comments 20</span>
+                  <small class="text-muted">Category: <span class="text-dark"><a href="blog.php?category=<?php echo htmlentities($Category); ?>"><?php echo htmlentities($Category); ?></a></span> & Written by <span class="text-dark"><a href="profile.php?username=<?php echo htmlentities($Admin); ?>"><?php echo htmlentities($Admin); ?></a></span> On <?php echo htmlentities($DateTime); ?></small>
                    <hr>
                    <p class="card-text">
                    <?php 
-                      echo htmlentities($PostText); 
+                      echo nl2br($PostText); 
                    ?>
                    </p>
                 </div>
@@ -220,8 +224,77 @@ $DateTime=strftime("%B-%d-%Y %H:%M:%S", $CurrentTime);
           </div>
           <!-- Main Area End */-->
           <!-- /* Side Area Start */ -->
-          <div class="col-sm-4" style="min-height: 40px; background: green;">
-          </div>
+         <div class="col-sm-4">
+            <div class="card mt-4">
+               <div class="card-body"><img src="img/start.png" class="d-block img-fluid mb-3" alt=""></div>
+               <div class="text-center">
+                  Amet aperiam sed sapiente aspernatur consequuntur id atque nihil, hic, exercitationem Quod facilis natus nisi numquam nesciunt Nemo at commodi hic aspernatur at? Eveniet distinctio labore quo culpa quas Laboriosam?
+               </div>
+            </div>
+            <br>
+            <div class="card">
+               <div class="card-header bg-dark text-light">
+                  <h2 class="lead">Sign Up !</h2>
+               </div>
+
+               <div class="card-body">
+                  <button class="btn btn-success btn-block text-center text-white mb-4" name="button">Join the Forum</button>
+                  <button class="btn btn-danger btn-block text-center text-white mb-4" name="button">Login</button>
+                  <div class="input-group mb-3">
+                     <input class="form-control" type="text" name="" placeholder="Enter your email" value="">
+                     <div class="input-group-append">
+                        <button type="button" class="btn btn-primary btn-sm text-center text-white" name="button">Subscribe Now</button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <br>
+            <div class="card">
+               <div class="card-header bg-primary text-light">
+               <h2 class="lead">Categories</h2>
+            </div>
+            <div class="card-body">
+               <?php 
+                  global $ConnectingDB;
+                  $sql = "SELECT * FROM category ORDER BY id desc";
+                  $stmt = $ConnectingDB->query($sql);
+                  while ($DataRows=$stmt->fetch()) {
+                     $CategoryID = $DataRows['id'];
+                     $CategoryName = $DataRows['title'];
+                  ?>
+                  <a href="blog.php?category=<?php echo $CategoryName; ?>"><span class="heading"><?php echo $CategoryName; ?></span></a> <br>
+                  <?php } ?> 
+               </div>
+            </div>
+            <br>
+            <div class="card-header bg-info text-white">
+               <h2 class="lead">Recent Posts</h2>
+            </div>
+
+            <div class="card-body">
+               <?php
+                  global $ConnectingDB;
+                  $sql="SELECT * FROM posts ORDER BY id DESC LIMIT 0,5";
+                  $stmt=$ConnectingDB->query($sql);
+                  while ($DataRows=$stmt->fetch()) {
+                     $ID=$DataRows['id'];
+                     $Title=$DataRows['title'];
+                     $DateTime=$DataRows['datetime'];
+                     $Image=$DataRows['image'];
+
+               ?>
+               <div class="media">
+                  <img src="uploads/<?php echo htmlentities($Image); ?>" class="d-block img-fluid align-self-start" width="90" height="94" alt="">
+                  <div class="media-body ml-2">
+                     <a href="fullpost.php?id=<?php echo $ID; ?>" target="_blank"><h6 class="lead"><?php echo htmlentities($Title); ?></h6></a>
+                     <p class="small"><?php echo htmlentities($DateTime); ?></p>
+                  </div>
+               </div>
+               <hr>
+               
+               <?php } ?> 
+            </div>
+         </div>
           <!-- /* Side Area End */ -->
     </div>
     <!-- HEADER END -->

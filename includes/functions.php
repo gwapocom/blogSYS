@@ -46,4 +46,67 @@ function Confirm_Login()
     Redirect_to("login.php");
  }
 }
+
+function TotalPosts()
+{
+   global $ConnectingDB;  
+   $sql = "SELECT COUNT(*) FROM posts";
+   $stmt = $ConnectingDB->query($sql);
+   $TotalRows = $stmt->fetch();
+   $TotalPosts = array_shift($TotalRows);
+   echo $TotalPosts;
+}
+
+function TotalCategory()
+{
+   global $ConnectingDB;  
+   $sql = "SELECT COUNT(*) FROM category";
+   $stmt = $ConnectingDB->query($sql);
+   $TotalRows = $stmt->fetch();
+   $TotalCategory = array_shift($TotalRows);
+   echo $TotalCategory;
+}
+
+function TotalAdmin()
+{
+   global $ConnectingDB;  
+   $sql = "SELECT COUNT(*) FROM admins";
+   $stmt = $ConnectingDB->query($sql);
+   $TotalRows = $stmt->fetch();
+   $TotalAdmin = array_shift($TotalRows);
+   echo $TotalAdmin;
+}
+
+
+function TotalComment()
+{
+   global $ConnectingDB;  
+   $sql = "SELECT COUNT(*) FROM comments";
+   $stmt = $ConnectingDB->query($sql);
+   $TotalRows = $stmt->fetch();
+   $TotalComment = array_shift($TotalRows);
+   echo $TotalComment;
+}
+
+
+function AppCommAccPos($PostID)
+{
+   
+   global $ConnectingDB;
+   $sqlApprove= "SELECT COUNT(*) FROM comments WHERE post_id='$PostID' AND status='ON'";
+   $stmtApprove=$ConnectingDB->query($sqlApprove);
+   $RowsTotal = $stmtApprove->fetch();
+   $Total=array_shift($RowsTotal);
+   return $Total;
+}
+
+function DisAppCommAccPos($PostID)
+{
+   global $ConnectingDB;
+   $sqlDisApprove= "SELECT COUNT(*) FROM comments WHERE post_id='$PostID' AND status='OFF'";
+   $stmtDisApprove=$ConnectingDB->query($sqlDisApprove);
+   $RowsTotal = $stmtDisApprove->fetch();
+   $Total=array_shift($RowsTotal);
+   return $Total;
+}
 ?>

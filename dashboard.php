@@ -11,7 +11,7 @@
    <meta charset="UTF-8" />
    <meta name="viewport" content="width=device-width, initial-scale=1" />
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-   <title>Posts</title>
+   <title>Dashboard</title>
    <link rel="stylesheet" href="css/styles.css">
    <script src="https://kit.fontawesome.com/8e45f7668c.js" crossorigin="anonymous"></script>
 </head>
@@ -62,7 +62,7 @@
       <div class="container">
          <div class="row">
             <div class="col-md-12">
-               <h1><i class="fa-solid fa-blog" style="color:27aae1;"></i> Blog Posts</h1>
+               <h1><i class="fa-solid fa-cog" style="color:27aae1;"></i>Dashboard</h1>
             </div>
             <div class="col-lg-3 mb-2">
                <a class="btn btn-primary btn-block" href="addnewpost.php"><i class="fa-solid fa-edit"></i>Add New Post</a>
@@ -84,62 +84,86 @@
    <!-- Main Area -->
    <section class="container py-2 mb-4">
       <div class="row">
-         <div class="col-lg-12">
+         
             <?php
                echo ErrorMessage();
                echo SuccessMessage();
             ?>
-            <table class="table table-striped table-hover">
-               <thead class="thead-dark">
-                  <tr>
-                     <th>#</th>
-                     <th>Title</th>
-                     <th>Category</th>
-                     <th>Date&Time</th>
-                     <th>Author</th>
-                     <th>Banner</th>
-                     <th>Comments</th>
-                     <th>Action</th>
-                     <th>Live Preview</th>
-                  </tr>
-               </thead>
-               <?php
-                  global $ConnectingDB;
-                  $sql = "SELECT * FROM posts";
-                  $stmt = $ConnectingDB->query($sql);
-                  $Sr = 0;
-                  while ($DataRows = $stmt->fetch()) {
-                     $Id = $DataRows["id"];
-                     $DateTime = $DataRows["datetime"];
-                     $PostTitle = $DataRows["title"];
-                     $Category = $DataRows["category"];
-                     $Admin = $DataRows["author"];
-                     $Image = $DataRows["image"];
-                     $PostText = $DataRows["post"];
-                     $Sr++;
+            <!-- Left side start -->
+            <div class="col-lg-2">
+               <div class="card text-center bg-dark text-white mb-3">
+                  <div class="card-body">
+                     <h1 class="lead">Posts</h1>
+                     <h4 class="display-5"><i class="fa-brands fa-readme"></i> 
+                        <?php 
+                           TotalPosts();
+                        ?>
+                     </h4>
+                  </div>
+
+                  <div class="card-body">
+                     <h1 class="lead">Categories</h1>
+                     <h4 class="display-5"><i class="fa-solid fa-folder"></i> 
+                        <?php
+                           TotalCategory();
+                        ?>
+                     </h4>
+                  </div>
+
+                  <div class="card-body">
+                     <h1 class="lead">Admins</h1>
+                     <h4 class="display-5"><i class="fa-solid fa-users"></i> 
+                        <?php 
+                           TotalAdmin();
+                        ?>
+                     </h4>
+                  </div>
+
+                  <div class="card-body">
+                     <h1 class="lead">Comments</h1>
+                     <h4 class="display-5"><i class="fa-solid fa-comments"></i> 
+                        <?php 
+                           TotalComment();
+                        ?>
+                     </h4>
+                  </div>
+               </div>
+            </div>
+         <!-- Left side end -->
+            
+           <div class="col-lg-10">
+               <h1>Top Posts</h1>
+               <table class="table table-striped table-hover">
+                  <thead class="thead-dark">
+                     <tr>
+                        <th>No.</th>
+                        <th>Title</th>
+                        <th>Date&Time</th>
+                        <th>Author</th>
+                        <th>Comments</th>
+                        <th>Details</th>
+                     </tr>
+                  </thead>
+                  <?php
+                     $SrNo=0;
+                     $sql = "SELECT * FROM posts ORDER BY id desc LIMIT 0,5";
+                     $stmt=$ConnectingDB->query($sql);
+                     while ($DataRows=$stmt->fetch()) {
+                        $PostID=$DataRows["id"];
+                        $DateTime=$DataRows["datetime"];
+                        $Author=$DataRows["author"];
+                        $Title=$DataRows["title"];
+                        $SrNo++;
                   ?>
-               <tbody>
-                  <tr>
-                     <td><?php echo $Sr; ?></td>
-                     <td>
-                        <?php if(strlen($PostTitle)>20){$PostTitle=substr($PostTitle,0,18).'..';}
-                           echo $PostTitle; ?></td>
-                     <td>
-                        <?php 
-                           if(strlen($Category)>8){$Category=substr($Category,0,8).'..';}
-                           echo $Category; ?> </td>
-                     <td>
-                        <?php 
-                           if(strlen($DateTime)>11){$DateTime=substr($DateTime,0,11).'..';}
-                           echo $DateTime; ?> </td>
-                     <td><?php 
-                           if(strlen($Admin)>6){$Admin=substr($Admin,0,6).'..';}
-                           echo $Admin; ?></td>
-                     <td>
-                        <img src="uploads/<?php echo $Image; ?>" width="170px;" height="50px;""</td>
+                     <tbody>
+                        <tr>
+                           <td><?php echo $SrNo; ?></td>
+                           <td><?php echo $Title; ?></td>
+                           <td><?php echo $DateTime; ?></td>
+                           <td><?php echo $Author; ?></td>
                            <td>
                                  <?php
-                                    $Total = AppCommAccPos($Id);
+                                    $Total = AppCommAccPos($PostID);
                                     if ($Total>0) {
                                     ?>
                                        <span class="badge badge-success">
@@ -149,7 +173,7 @@
                                        <?php } ?>
 
                                  <?php
-                                    $Total = DisAppCommAccPos($Id);
+                                    $Total = DisAppCommAccPos($PostID);
                                     if ($Total>0) {
                                     ?>
                                        <span class="badge badge-danger">
@@ -159,19 +183,15 @@
                                        <?php } ?>
 
                            </td>
-                     <td>
-                        <a href="editpost.php?id=<?php echo $Id; ?>"><span class="btn btn-warning">Edit</span></a>
-                        <a href="deletepost.php?id=<?php echo $Id; ?>"><span class="btn btn-danger">Delete</span></a>
-                     </td>
-                     <td>
-                        <a href="fullpost.php?id=<?php echo $Id; ?>" target="_blank"><span class="btn btn-primary">Live Preview</span></a>
-                     </td>
-                  </tr>
-               </tbody>
-               <?php
-                     } ?>
-            </table>
-         </div>
+
+                           <td><a target="_blank" href="FullPost.php?id=<?php echo $PostID; ?>"><span class="btn btn-info">Preview</span></a></td>
+                        </tr>
+                     </tbody>
+                     <?php } ?>
+               </table>
+            </div>
+            
+         
       </div>
    </section>
    <!-- Main Area END -->

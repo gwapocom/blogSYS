@@ -1,0 +1,292 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	C:/xampp/htdocs/CMS/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	/3ab583ee/
+.COCK	./css/styles.css	/^.COCK {$/;"	c
+.FieldInfo	./css/styles.css	/^.FieldInfo {$/;"	c
+.heading	./css/styles.css	/^.heading {$/;"	c
+.heading:hover	./css/styles.css	/^.heading:hover {$/;"	c
+Addedby	./admin.php	/^                         $Addedby = $DataRows['addedby'];$/;"	v
+AdmiName	./admin.php	/^                         $AdmiName = $DataRows['aname'];$/;"	v
+Admin	./addnewpost.php	/^$Admin = $_SESSION['Username'];$/;"	v
+Admin	./admin.php	/^$Admin = $_SESSION['Username'];$/;"	v
+Admin	./approvecomment.php	/^      $Admin = $_SESSION['AdmiName'];$/;"	v
+Admin	./categories.php	/^$Admin = $_SESSION['Username'];$/;"	v
+Admin	./disapprovecomment.php	/^      $Admin = $_SESSION['AdmiName'];$/;"	v
+Admin	./editpost.php	/^$Admin = "OTIN";$/;"	v
+Admin	./poset.php	/^                           if(strlen($Admin)>6){$Admin=substr($Admin,0,6).'..';}$/;"	v
+Admin	./poset.php	/^                     $Admin = $DataRows["author"];$/;"	v
+Admin	blog.php	/^                  $Admin = $DataRows["author"];$/;"	v
+Admin	fullpost.php	/^                  $Admin = $DataRows["author"];$/;"	v
+AdminID	./admin.php	/^                         $AdminID = $DataRows['id'];$/;"	v
+AdminUsername	./admin.php	/^                         $AdminUsername = $DataRows['username'];$/;"	v
+AppCommAccPos	./includes/functions.php	/^function AppCommAccPos($PostID)$/;"	f
+Author	./dashboard.php	/^                        $Author=$DataRows["author"];$/;"	v
+Basic	./Basic.html	/^               <h1><i class="fa-solid fa-text-height" style="color:27aae1;"><\/i> Basic<\/h1>$/;"	h
+Basic	./Basic.html	/^   <title>Basic<\/title>$/;"	j
+Category	./addnewpost.php	/^   $Category = $_POST['categorry'];$/;"	v
+Category	./categories.php	/^$Category = $_POST['categorytitle'];$/;"	v
+Category	./editpost.php	/^   $Category = $_POST['categorry'];$/;"	v
+Category	./poset.php	/^                           if(strlen($Category)>8){$Category=substr($Category,0,8).'..';}$/;"	v
+Category	./poset.php	/^                     $Category = $DataRows["category"];$/;"	v
+Category	blog.php	/^                      $Category=$_GET['category'];$/;"	v
+Category	blog.php	/^                   $Category = $DataRows["category"];$/;"	v
+Category	fullpost.php	/^                  $Category = $DataRows["category"];$/;"	v
+CategoryDate	./categories.php	/^                         $CategoryDate = $DataRows['datetime'];$/;"	v
+CategoryID	./categories.php	/^                         $CategoryID = $DataRows['id'];$/;"	v
+CategoryID	blog.php	/^                     $CategoryID = $DataRows['id'];$/;"	v
+CategoryID	fullpost.php	/^                     $CategoryID = $DataRows['id'];$/;"	v
+CategoryName	./addnewpost.php	/^                              $CategoryName = $DataRows['title'];$/;"	v
+CategoryName	./categories.php	/^                         $CategoryName = $DataRows['title'];$/;"	v
+CategoryName	./editpost.php	/^                              $CategoryName = $DataRows['title'];$/;"	v
+CategoryName	blog.php	/^                     $CategoryName = $DataRows['title'];$/;"	v
+CategoryName	fullpost.php	/^                     $CategoryName = $DataRows['title'];$/;"	v
+CategoryToDelete	./deletepost.php	/^      $CategoryToDelete = $DataRows["category"];$/;"	v
+CategoryToUpdate	./editpost.php	/^                    $CategoryToUpdate = $DataRows["category"];$/;"	v
+CheckUserNameExistsOrNot	./includes/functions.php	/^function CheckUserNameExistsOrNot($Username)$/;"	f
+CommentContent	fullpost.php	/^                         $CommentContent = $DataRows['comment'];$/;"	v
+CommentDate	fullpost.php	/^                         $CommentDate = $DataRows['datetime'];$/;"	v
+CommentID	./comment.php	/^              $CommentID = $DataRows['id'];$/;"	v
+CommentName	fullpost.php	/^                         $CommentName = $DataRows['name'];$/;"	v
+Commenter	fullpost.php	/^   $Commenter = $_POST['commenterthoughts'];$/;"	v
+CommenterContent	./comment.php	/^              $CommenterContent = $DataRows['comment'];$/;"	v
+CommenterEmail	fullpost.php	/^   $CommenterEmail = $_POST['commenteremail'];$/;"	v
+CommenterName	./comment.php	/^              $CommenterName = $DataRows['name'];$/;"	v
+CommenterName	fullpost.php	/^   $CommenterName = $_POST['commentername'];$/;"	v
+CommenterPostID	./comment.php	/^              $CommenterPostID = $DataRows['post_id'];$/;"	v
+ConfirmPassword	./admin.php	/^$ConfirmPassword = $_POST['confirmpassword'];$/;"	v
+Confirm_Login	./includes/functions.php	/^function Confirm_Login()$/;"	f
+ConnectingDB	./includes/DB.php	/^$ConnectingDB = new PDO($DSN,'root','uten');$/;"	v
+CreatorName	./categories.php	/^                         $CreatorName = $DataRows['author'];$/;"	v
+CurrentTime	./addnewpost.php	/^$CurrentTime=time();$/;"	v
+CurrentTime	./admin.php	/^$CurrentTime=time();$/;"	v
+CurrentTime	./categories.php	/^$CurrentTime=time();$/;"	v
+CurrentTime	./editpost.php	/^$CurrentTime=time();$/;"	v
+CurrentTime	fullpost.php	/^$CurrentTime=time();$/;"	v
+DSN	./includes/DB.php	/^$DSN='mysql:host = localhost; dbname=jazeb';$/;"	v
+DataRows	./addnewpost.php	/^                           while ($DataRows = $stmt->fetch()) {$/;"	v
+DataRows	./admin.php	/^                      while ($DataRows=$Execute->fetch()) {$/;"	v
+DataRows	./categories.php	/^                      while ($DataRows=$Execute->fetch()) {$/;"	v
+DataRows	./comment.php	/^           while ($DataRows=$Execute->fetch()) {$/;"	v
+DataRows	./dashboard.php	/^                     while ($DataRows=$stmt->fetch()) {$/;"	v
+DataRows	./deletepost.php	/^   while ($DataRows = $stmt->fetch()) {$/;"	v
+DataRows	./editpost.php	/^                           while ($DataRows = $stmt->fetch()) {$/;"	v
+DataRows	./editpost.php	/^                 while ($DataRows = $stmt->fetch()) {$/;"	v
+DataRows	./poset.php	/^                  while ($DataRows = $stmt->fetch()) {$/;"	v
+DataRows	blog.php	/^                  while ($DataRows=$stmt->fetch()) {$/;"	v
+DataRows	blog.php	/^                while ($DataRows = $stmt->fetch()) {$/;"	v
+DataRows	fullpost.php	/^                      while ($DataRows=$stmt->fetch()) {$/;"	v
+DataRows	fullpost.php	/^                  while ($DataRows=$stmt->fetch()) {$/;"	v
+DataRows	fullpost.php	/^               while ($DataRows = $stmt->fetch()) {$/;"	v
+DataRows	profile.php	/^      while ($DataRows=$stmt->fetch()) {$/;"	v
+DateTime	./addnewpost.php	/^$DateTime=strftime("%B-%d-%Y %H:%M:%S", $CurrentTime);$/;"	v
+DateTime	./admin.php	/^                         $DateTime = $DataRows['datetime'];$/;"	v
+DateTime	./admin.php	/^$DateTime=strftime("%B-%d-%Y %H:%M:%S", $CurrentTime);$/;"	v
+DateTime	./categories.php	/^$DateTime=strftime("%B-%d-%Y %H:%M:%S", $CurrentTime);$/;"	v
+DateTime	./dashboard.php	/^                        $DateTime=$DataRows["datetime"];$/;"	v
+DateTime	./editpost.php	/^$DateTime=strftime("%B-%d-%Y %H:%M:%S", $CurrentTime);$/;"	v
+DateTime	./poset.php	/^                           if(strlen($DateTime)>11){$DateTime=substr($DateTime,0,11).'..';}$/;"	v
+DateTime	./poset.php	/^                     $DateTime = $DataRows["datetime"];$/;"	v
+DateTime	blog.php	/^                     $DateTime=$DataRows['datetime'];$/;"	v
+DateTime	blog.php	/^                   $DateTime = $DataRows["datetime"];$/;"	v
+DateTime	fullpost.php	/^                     $DateTime=$DataRows['datetime'];$/;"	v
+DateTime	fullpost.php	/^                  $DateTime = $DataRows["datetime"];$/;"	v
+DateTime	fullpost.php	/^$DateTime=strftime("%B-%d-%Y %H:%M:%S", $CurrentTime);$/;"	v
+DateTimeOfComment	./comment.php	/^              $DateTimeOfComment = $DataRows['datetime'];$/;"	v
+DisAppCommAccPos	./includes/functions.php	/^function DisAppCommAccPos($PostID)$/;"	f
+ErrorMessage	./includes/sessions.php	/^function ErrorMessage()$/;"	f
+Execute	./addnewpost.php	/^      $Execute=$stmt->execute();$/;"	v
+Execute	./admin.php	/^                      $Execute = $ConnectingDB->query($sql);$/;"	v
+Execute	./admin.php	/^      $Execute=$stmt->execute();$/;"	v
+Execute	./approvecomment.php	/^      $Execute = $ConnectingDB->query($sql);$/;"	v
+Execute	./categories.php	/^                      $Execute = $ConnectingDB->query($sql);$/;"	v
+Execute	./categories.php	/^      $Execute=$stmt->execute();$/;"	v
+Execute	./comment.php	/^           $Execute = $ConnectingDB->query($sql);$/;"	v
+Execute	./deleteadmin.php	/^      $Execute = $ConnectingDB->query($sql);$/;"	v
+Execute	./deletecategories.php	/^      $Execute = $ConnectingDB->query($sql);$/;"	v
+Execute	./deletecomment.php	/^      $Execute = $ConnectingDB->query($sql);$/;"	v
+Execute	./deletepost.php	/^       $Execute = $ConnectingDB->query($sql);$/;"	v
+Execute	./disapprovecomment.php	/^      $Execute = $ConnectingDB->query($sql);$/;"	v
+Execute	./editpost.php	/^       $Execute = $ConnectingDB->query($sql);$/;"	v
+Execute	fullpost.php	/^      $Execute=$stmt->execute();$/;"	v
+ExistingBio	profile.php	/^         $ExistingBio=$DataRows["abio"];$/;"	v
+ExistingHeadline	profile.php	/^         $ExistingHeadline=$DataRows["aheadline"];$/;"	v
+ExistingImage	profile.php	/^         $ExistingImage=$DataRows["aimage"];$/;"	v
+ExistingName	profile.php	/^         $ExistingName=$DataRows["aname"];$/;"	v
+Found_Account	./login.php	/^         $Found_Account=Login_Attempt($Username,$Password);$/;"	v
+ID	blog.php	/^                     $ID=$DataRows['id'];$/;"	v
+ID	fullpost.php	/^                     $ID=$DataRows['id'];$/;"	v
+Id	./addnewpost.php	/^                              $Id = $DataRows['id'];$/;"	v
+Id	./editpost.php	/^                              $Id = $DataRows['id'];$/;"	v
+Id	./poset.php	/^                     $Id = $DataRows["id"];$/;"	v
+Image	./addnewpost.php	/^   $Image = $_FILES['image']['name'];$/;"	v
+Image	./editpost.php	/^   $Image = $_FILES['image']['name'];$/;"	v
+Image	./poset.php	/^                     $Image = $DataRows["image"];$/;"	v
+Image	blog.php	/^                     $Image=$DataRows['image'];$/;"	v
+Image	blog.php	/^                  $Image = $DataRows["image"];$/;"	v
+Image	fullpost.php	/^                     $Image=$DataRows['image'];$/;"	v
+Image	fullpost.php	/^                  $Image = $DataRows["image"];$/;"	v
+ImageToDelete	./deletepost.php	/^      $ImageToDelete = $DataRows["image"];$/;"	v
+ImageToUpdate	./editpost.php	/^                    $ImageToUpdate = $DataRows["image"];$/;"	v
+Login_Attempt	./includes/functions.php	/^function Login_Attempt($Username,$Password)$/;"	f
+Name	./admin.php	/^   $Name = $_POST['name'];$/;"	v
+Page	blog.php	/^                   $Page=$_GET['page'];$/;"	v
+Password	./admin.php	/^$Password = $_POST['password'];$/;"	v
+Password	./login.php	/^      $Password = $_POST['password'];$/;"	v
+PostID	./dashboard.php	/^                        $PostID=$DataRows["id"];$/;"	v
+PostId	blog.php	/^                   $PostId = $DataRows["id"];$/;"	v
+PostId	fullpost.php	/^                  $PostId = $DataRows["id"];$/;"	v
+PostIdFromURL	fullpost.php	/^                      $PostIdFromURL = $_GET["id"];$/;"	v
+PostPagination	blog.php	/^                     $PostPagination=$TotalPosts\/4;$/;"	v
+PostPagination	blog.php	/^                     $PostPagination=ceil($PostPagination);$/;"	v
+PostText	./addnewpost.php	/^   $PostText = $_POST['postdescription'];$/;"	v
+PostText	./editpost.php	/^   $PostText = $_POST['postdescription'];$/;"	v
+PostText	./poset.php	/^                     $PostText = $DataRows["post"];$/;"	v
+PostText	blog.php	/^                         $PostText = substr($PostText,0,150)."...";$/;"	v
+PostText	blog.php	/^                  $PostText = $DataRows["post"];$/;"	v
+PostText	fullpost.php	/^                  $PostText = $DataRows["post"];$/;"	v
+PostTextToDelete	./deletepost.php	/^      $PostTextToDelete = $DataRows["post"];$/;"	v
+PostTextToUpdate	./editpost.php	/^                    $PostTextToUpdate = $DataRows["post"];$/;"	v
+PostTitle	./addnewpost.php	/^   $PostTitle = $_POST['postitle'];$/;"	v
+PostTitle	./editpost.php	/^   $PostTitle = $_POST['postitle'];$/;"	v
+PostTitle	./poset.php	/^                        <?php if(strlen($PostTitle)>20){$PostTitle=substr($PostTitle,0,18).'..';/;"	v
+PostTitle	./poset.php	/^                     $PostTitle = $DataRows["title"];$/;"	v
+PostTitle	blog.php	/^                   $PostTitle = $DataRows["title"];$/;"	v
+PostTitle	fullpost.php	/^                  $PostTitle = $DataRows["title"];$/;"	v
+Redirect_to	./includes/functions.php	/^function Redirect_to($New_location)$/;"	f
+Result	fullpost.php	/^                      $Result=$stmt->rowCount();$/;"	v
+Result	profile.php	/^   $Result=$stmt->rowCount();$/;"	v
+RowPagination	blog.php	/^                     $RowPagination=$stmt->fetch();$/;"	v
+Search	blog.php	/^                   $Search = $_GET['search'];$/;"	v
+Search	fullpost.php	/^                   $Search = $_GET['search'];$/;"	v
+SearchQueryParameter	./approvecomment.php	/^      $SearchQueryParameter = $_GET['id'];   $/;"	v
+SearchQueryParameter	./deleteadmin.php	/^      $SearchQueryParameter = $_GET['id'];   $/;"	v
+SearchQueryParameter	./deletecategories.php	/^      $SearchQueryParameter = $_GET['id'];   $/;"	v
+SearchQueryParameter	./deletecomment.php	/^      $SearchQueryParameter = $_GET['id'];   $/;"	v
+SearchQueryParameter	./deletepost.php	/^   $SearchQueryParameter = $_GET['id'];$/;"	v
+SearchQueryParameter	./disapprovecomment.php	/^      $SearchQueryParameter = $_GET['id'];   $/;"	v
+SearchQueryParameter	./editpost.php	/^   $SearchQueryParameter = $_GET['id'];$/;"	v
+SearchQueryParameter	fullpost.php	/^<?php $SearchQueryParameter = $_GET['id']; ?>$/;"	v
+SearchQueryParameter	profile.php	/^   $SearchQueryParameter=$_GET['username'];$/;"	v
+ShowPostFrom	blog.php	/^                      $ShowPostFrom=($Page*4)-4;$/;"	v
+ShowPostFrom	blog.php	/^                      $ShowPostFrom=0;$/;"	v
+Sr	./poset.php	/^                  $Sr = 0;$/;"	v
+SrNo	./admin.php	/^                      $SrNo = 0;$/;"	v
+SrNo	./categories.php	/^                      $SrNo = 0;$/;"	v
+SrNo	./comment.php	/^           $SrNo = 0;$/;"	v
+SrNo	./dashboard.php	/^                     $SrNo=0;$/;"	v
+SuccessMessage	./includes/sessions.php	/^function SuccessMessage()$/;"	f
+Target	./addnewpost.php	/^   $Target = "uploads\/".basename($_FILES['image']['name']);$/;"	v
+Target	./editpost.php	/^   $Target = "uploads\/".basename($_FILES['image']['name']);$/;"	v
+Target_Path_To_DELETE_IMG	./deletepost.php	/^         $Target_Path_To_DELETE_IMG = "uploads\/$ImageToDelete";$/;"	v
+Title	./dashboard.php	/^                        $Title=$DataRows["title"];$/;"	v
+Title	blog.php	/^                     $Title=$DataRows['title'];$/;"	v
+Title	fullpost.php	/^                     $Title=$DataRows['title'];$/;"	v
+TitleToDelete	./deletepost.php	/^      $TitleToDelete = $DataRows["title"];$/;"	v
+TitleToUpdate	./editpost.php	/^                    $TitleToUpdate = $DataRows["title"];$/;"	v
+Total	./dashboard.php	/^                                    $Total = AppCommAccPos($PostID);$/;"	v
+Total	./dashboard.php	/^                                    $Total = DisAppCommAccPos($PostID);$/;"	v
+Total	./poset.php	/^                                    $Total = AppCommAccPos($Id);$/;"	v
+Total	./poset.php	/^                                    $Total = DisAppCommAccPos($Id);$/;"	v
+TotalAdmin	./includes/functions.php	/^function TotalAdmin()$/;"	f
+TotalCategory	./includes/functions.php	/^function TotalCategory()$/;"	f
+TotalComment	./includes/functions.php	/^function TotalComment()$/;"	f
+TotalPosts	./includes/functions.php	/^function TotalPosts()$/;"	f
+TotalPosts	blog.php	/^                     $TotalPosts=array_shift($RowPagination);$/;"	v
+Username	./admin.php	/^   $Username = $_POST['username'];$/;"	v
+Username	./login.php	/^      $Username = $_POST['username'];$/;"	v
+addedby	./test.sql	/^   addedby VARCHAR(30)$/;"	E	table:admins
+admins	./test.sql	/^create table admins($/;"	t
+aname	./test.sql	/^   aname VARCHAR(30),$/;"	E	table:admins
+author	./test.sql	/^author VARCHAR(50),$/;"	E	table:category
+author	./test.sql	/^author VARCHAR(50),$/;"	E	table:posts
+category	./test.sql	/^category VARCHAR(50),$/;"	E	table:posts
+category	./test.sql	/^create table category ($/;"	t
+cms	./test.sql	/^Create DATABASE cms;$/;"	b
+comment	./test.sql	/^   comment varchar(500)$/;"	E	table:comments
+comments	./test.sql	/^create table comments($/;"	t
+datetime	./test.sql	/^   datetime VARCHAR(50) ,$/;"	E	table:admins
+datetime	./test.sql	/^   datetime varchar(50),$/;"	E	table:comments
+datetime	./test.sql	/^datetime VARCHAR(50)$/;"	E	table:category
+datetime	./test.sql	/^datetime VARCHAR(50),$/;"	E	table:posts
+email	./test.sql	/^   email varchar(60),$/;"	E	table:comments
+i	blog.php	/^                     for ($i = 1; $i <= $PostPagination; $i++) {$/;"	v
+id	./test.sql	/^   id INT(10) PRIMARY KEY AUTO_INCREMENT,$/;"	E	table:admins
+id	./test.sql	/^   id int(10) PRIMARY KEY AUTO_INCREMENT,$/;"	E	table:comments
+id	./test.sql	/^id INT(10) PRIMARY KEY AUTO_INCREMENT,$/;"	E	table:category
+id	./test.sql	/^id INT(10) PRIMARY KEY AUTO_INCREMENT,$/;"	E	table:posts
+image	./test.sql	/^image VARCHAR(50),$/;"	E	table:posts
+name	./test.sql	/^   name varchar(50),$/;"	E	table:comments
+navbarcollapseCMS	./Basic.html	/^         <div id="navbarcollapseCMS" class="collapse navbar-collapse">$/;"	I
+password	./test.sql	/^   password VARCHAR(60),$/;"	E	table:admins
+post	./test.sql	/^post VARCHAR(1000)$/;"	E	table:posts
+posts	./test.sql	/^create table posts($/;"	t
+sql	./addnewpost.php	/^                           $sql = "SELECT * FROM category";$/;"	v
+sql	./addnewpost.php	/^       $sql = "INSERT INTO posts(datetime,title,category,author,image,post)";$/;"	v
+sql	./admin.php	/^                      $sql = "SELECT * FROM admins ORDER BY id DESC";$/;"	v
+sql	./admin.php	/^      $sql = "INSERT INTO admins(datetime,username,password,aname,addedby)";$/;"	v
+sql	./approvecomment.php	/^      $sql = "UPDATE comments SET status='ON', approvedby='$Admin' WHERE id='$SearchQueryParamet/;"	v
+sql	./categories.php	/^                      $sql = "SELECT * FROM category ORDER BY id DESC";$/;"	v
+sql	./categories.php	/^      $sql = "INSERT INTO category(title,author,datetime)";$/;"	v
+sql	./comment.php	/^           $sql = "SELECT * FROM comments WHERE status='OFF' ORDER BY id DESC";$/;"	v
+sql	./comment.php	/^           $sql = "SELECT * FROM comments WHERE status='ON' ORDER BY id DESC";$/;"	v
+sql	./dashboard.php	/^                     $sql = "SELECT * FROM posts ORDER BY id desc LIMIT 0,5";$/;"	v
+sql	./deleteadmin.php	/^      $sql = "Delete FROM admins WHERE id='$SearchQueryParameter'";$/;"	v
+sql	./deletecategories.php	/^      $sql = "Delete FROM category WHERE id='$SearchQueryParameter'";$/;"	v
+sql	./deletecomment.php	/^      $sql = "Delete FROM comments WHERE id='$SearchQueryParameter'";$/;"	v
+sql	./deletepost.php	/^       $sql = "DELETE FROM posts WHERE id='$SearchQueryParameter'";$/;"	v
+sql	./deletepost.php	/^   $sql = "SELECT * FROM posts WHERE id='$SearchQueryParameter'";$/;"	v
+sql	./disapprovecomment.php	/^      $sql = "UPDATE comments SET status='OFF', approvedby='$Admin' WHERE id='$SearchQueryParame/;"	v
+sql	./editpost.php	/^                           $sql = "SELECT * FROM category";$/;"	v
+sql	./editpost.php	/^                 $sql = "SELECT * FROM posts WHERE id='$SearchQueryParameter'";$/;"	v
+sql	./editpost.php	/^          $sql = "UPDATE posts SET title='$PostTitle', category='$Category', image='$Image', pos/;"	v
+sql	./editpost.php	/^          $sql = "UPDATE posts SET title='$PostTitle', category='$Category', post='$PostText' WH/;"	v
+sql	./poset.php	/^                  $sql = "SELECT * FROM posts";$/;"	v
+sql	blog.php	/^                      $sql="SELECT * FROM posts WHERE category='$Category' ORDER BY id desc";$/;"	v
+sql	blog.php	/^                     $sql="SELECT COUNT(*) FROM posts";$/;"	v
+sql	blog.php	/^                   $sql = "SELECT * FROM posts $/;"	v
+sql	blog.php	/^                   $sql = "SELECT * FROM posts ORDER BY id DESC LIMIT 0,3";$/;"	v
+sql	blog.php	/^                   $sql="SELECT * FROM posts ORDER BY id desc LIMIT $ShowPostFrom,4"; $/;"	v
+sql	blog.php	/^                  $sql = "SELECT * FROM category ORDER BY id desc";$/;"	v
+sql	blog.php	/^                  $sql="SELECT * FROM posts ORDER BY id DESC LIMIT 0,5";$/;"	v
+sql	fullpost.php	/^                      $sql = "SELECT * FROM comments $/;"	v
+sql	fullpost.php	/^                      $sql = "SELECT * FROM posts WHERE id='$PostIdFromURL'";$/;"	v
+sql	fullpost.php	/^                   $sql = "SELECT * FROM posts $/;"	v
+sql	fullpost.php	/^                  $sql = "SELECT * FROM category ORDER BY id desc";$/;"	v
+sql	fullpost.php	/^                  $sql="SELECT * FROM posts ORDER BY id DESC LIMIT 0,5";$/;"	v
+sql	fullpost.php	/^            $sql = "INSERT INTO comments(datetime,name,email,comment,approvedby,status,post_id)"/;"	v
+sql	profile.php	/^   $sql = "SELECT aname,aheadline,abio,aimage FROM admins WHERE username=:userNem";$/;"	v
+stmt	./addnewpost.php	/^                           $stmt = $ConnectingDB->query($sql);$/;"	v
+stmt	./addnewpost.php	/^      $stmt = $ConnectingDB->prepare($sql);$/;"	v
+stmt	./admin.php	/^      $stmt = $ConnectingDB->prepare($sql);$/;"	v
+stmt	./categories.php	/^      $stmt = $ConnectingDB->prepare($sql);$/;"	v
+stmt	./dashboard.php	/^                     $stmt=$ConnectingDB->query($sql);$/;"	v
+stmt	./deletepost.php	/^   $stmt = $ConnectingDB->query($sql);$/;"	v
+stmt	./editpost.php	/^                           $stmt = $ConnectingDB->query($sql);$/;"	v
+stmt	./editpost.php	/^                 $stmt = $ConnectingDB->query($sql);$/;"	v
+stmt	./poset.php	/^                  $stmt = $ConnectingDB->query($sql);$/;"	v
+stmt	blog.php	/^                      $stmt=$ConnectingDB->query($sql);$/;"	v
+stmt	blog.php	/^                     $stmt=$ConnectingDB->query($sql);$/;"	v
+stmt	blog.php	/^                   $stmt = $ConnectingDB->prepare($sql);$/;"	v
+stmt	blog.php	/^                   $stmt = $ConnectingDB->query($sql);$/;"	v
+stmt	blog.php	/^                   $stmt=$ConnectingDB->query($sql);$/;"	v
+stmt	blog.php	/^                  $stmt = $ConnectingDB->query($sql);$/;"	v
+stmt	blog.php	/^                  $stmt=$ConnectingDB->query($sql);$/;"	v
+stmt	fullpost.php	/^                      $stmt = $ConnectingDB->query($sql);$/;"	v
+stmt	fullpost.php	/^                   $stmt = $ConnectingDB->prepare($sql);$/;"	v
+stmt	fullpost.php	/^                  $stmt = $ConnectingDB->query($sql);$/;"	v
+stmt	fullpost.php	/^                  $stmt=$ConnectingDB->query($sql);$/;"	v
+stmt	fullpost.php	/^            $stmt = $ConnectingDB->prepare($sql);$/;"	v
+stmt	profile.php	/^   $stmt=$ConnectingDB->prepare($sql);$/;"	v
+sun	./includes/sessions.php	/^function sun()$/;"	f
+title	./test.sql	/^title VARCHAR(300),$/;"	E	table:posts
+title	./test.sql	/^title VARCHAR(50),$/;"	E	table:category
+username	./test.sql	/^   username VARCHAR(50),$/;"	E	table:admins
+year	./Basic.html	/^               <p class="lead text-center">Theme By | ME | Copyright <span id="year"><\/span> Al/;"	I
