@@ -150,6 +150,7 @@ $DateTime=strftime("%B-%d-%Y %H:%M:%S", $CurrentTime);
                    <p class="card-text">
                    <?php 
                       echo nl2br($PostText); 
+                      //
                    ?>
                    </p>
                 </div>
